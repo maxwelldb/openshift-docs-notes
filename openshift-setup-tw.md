@@ -1,0 +1,17 @@
+= Configuring a fresh Tumbleweed installation for writing OCP docs
+
+This all seems to work as of TW snapshot 20220111.
+
+== Prerequisites
+
+* `sudo zypper ref`, `sudo zypper dup`
+
+* Ruby 3.0.3 or greater--this should already be installed for YaST, but `ruby -v` to confirm.
+
+== Procedure
+
+1. Install GNU make, gcc, and gcc-c++: `sudo zypper install make gcc gcc-c++`
+2. Install the ascii_binder gem: `gem install ascii_binder --user-install`
+3. Add the user-install gems binary directory to your path. This will probably pop up as a warning, but as an example, it might look like `/home/johnsmith/.local/share/gem/ruby/3.0.0/bin`
+4. `cd` to the openshift-docs directory and run ascii_binder: `ascii_binder.ruby.3.0`
+   You can symlink, rename, etc., to your heart's desire, but if this command works, you're good.

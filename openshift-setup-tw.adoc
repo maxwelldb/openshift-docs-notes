@@ -42,6 +42,6 @@ $ ascii_binder.ruby.3.0 clean
 ----
 
 [TIP]
-----
+====
 Don't want versions appended to your gem binaries? Use the `--no-format-executable` option for `gem install`. For more info, see the link:https://guides.rubygems.org/command-reference/#installupdate-options[`gem install` docs].
-----
+====
